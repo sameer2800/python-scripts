@@ -1,0 +1,9 @@
+echo "hello"
+
+T="md5sum_org $1"
+
+if [ "$1" = "output.sam" ]; then
+               echo "again"
+            else
+               eval $T
+            fi
