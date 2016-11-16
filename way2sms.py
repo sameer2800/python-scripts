@@ -60,8 +60,9 @@ def Message(opener,token) :
 	print 'http://site21.way2sms.com/sendSMS?Token='+token
 	
 	print url_data
-	req = urllib2.Request(url, url_data)
-	response = opener.open(url,url_data)
+	#one of these 2 will do
+	req = urllib2.Request(url, url_data) 
+	#response = opener.open(url,url_data)
 	#print response.read()
 
 
