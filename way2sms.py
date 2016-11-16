@@ -21,7 +21,7 @@ def Login(user,passw,opener,cj):
   	try:
   		sock = opener.open(url, url_data)	
   		
-  		cooki = "hey"
+  		cooki = "hey" #only one cookie in cj
   		for cookies in cj:
    				cooki = cookies.value
   		
@@ -35,7 +35,7 @@ def Login(user,passw,opener,cj):
 
 
 def Message(opener,token) :
-	mobile = raw_input("mobile no : ")
+	mobile = raw_input("receiver mobile no : ")
 	message = raw_input("enter message :")
 
 	url="http://site21.way2sms.com/smstoss.action"
@@ -68,8 +68,7 @@ def Message(opener,token) :
   	
 user = raw_input("Enter username: ")
 passw = getpass()
-#user ="7897009371"
-#passw ="sameer"
+
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
